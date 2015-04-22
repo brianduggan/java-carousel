@@ -1,0 +1,33 @@
+/* Start Drawing, then use HTML, then add CSS, then JS
+
+*/
+
+#frame {
+	width: 800px;
+	height: 600px;
+	overflow: hidden;
+	position: relative; /*easy for positioning arrows*/
+}
+
+#tray { 					/*needs width for sliding purposes, but JS will set it later*/
+	width: 2400px;
+}
+
+.slide {
+	width: 800px;
+	height: 600px;
+	float: left;
+}
+
+a.prev, a.next {
+	position: absolute;
+	top: 50%;				/*to show half-way down, since they are absolute and the parent is absolute they will stick there*/
+}
+
+a.prev {
+	left: 0;
+}
+
+a.next {
+	right: 0;
+}
