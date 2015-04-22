@@ -10,19 +10,23 @@ $(document).ready(function(){
 
 	$('a.next').click(function(event){
 		// update the positionNum, calculate slide distance to shift, animate the tray
-		if (positionNum < 2){
+		if (positionNum === (numOfSlides - 1)) {
+			positionNum = 0;
+		} else {
 			positionNum += 1;
-		};
-		var distance = positionNum * slideWidth;
-		$('#tray').animate({right:distance}, slideSpeed);
-
+		}
+			var distance = positionNum * slideWidth;
+			$('#tray').animate({right:distance}, slideSpeed);
 		event.preventDefault();
 	});
 
 	$('a.prev').click(function(event){
-		if (positionNum > 0){
+		if (positionNum === 0) {
+			positionNum = (numOfSlides - 1);
+		} else {
 			positionNum -= 1;
-		};
+		}
+
 		var distance = positionNum * slideWidth;
 		$('#tray').animate({right:distance}, slideSpeed);
 
