@@ -10,7 +10,8 @@
 }
 
 #tray { 					/*needs width for sliding purposes, but JS will set it later*/
-	width: 2400px;
+	/*width: 2400px; see note above*/
+	position: relative;
 }
 
 .slide {
